@@ -1,10 +1,7 @@
 package com.driver;
 
 public class Main {
-       static class Product {
-//            Use static otherwise we have to create outer class and a inner class
-//            Main obj = new Main();
-//            Main.Product p = obj.new Product();
+        class Product {
         public int product(int x, int y) {
             return x * y;
         }
@@ -18,9 +15,8 @@ public class Main {
 
     }
     public static void main(String[] args) {
-//          Main obj = new Main();
-//        Main.Product p = obj.new Product();
-        Product p = new Product();
+          Main obj = new Main();
+        Main.Product p = obj.new Product();
         int result =  p.product(10, 20);
         int result2 = p.product(10, 20, 30);
         double result3 = p.product(10.0, 20.1);
@@ -29,8 +25,4 @@ public class Main {
         System.out.println(result3);
 
     }
-
-
-
-
 }
